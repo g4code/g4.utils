@@ -28,6 +28,14 @@
 .capitalize {
     text-transform: capitalize;
 }
+
+.has_error {
+    input,
+    select {
+        border: 1px solid red!important;
+    }
+}
+
 .error_message {
     position: relative;
     color: red;
