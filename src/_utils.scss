@@ -59,6 +59,12 @@
     left: -10000px !important;
     position: absolute !important;
 }
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    // IE8 filter
+    $opacity-ie: $opacity * 100;
+    filter: #{alpha(opacity = $opacity-ie)};
+}
 .disabled,
 [disabled]{
     cursor: not-allowed;
