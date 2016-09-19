@@ -5,9 +5,13 @@
     display: none !important;
     visibility: hidden !important;
 }
-.active {
+.show {
     display: block !important;
     visibility: visible !important;
+}
+.active {
+    display: block;
+    visibility: visible;
 }
 .block {
     display: block !important;
