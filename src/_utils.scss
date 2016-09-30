@@ -39,6 +39,12 @@
         border: 1px solid red!important;
     }
 }
+.invisible {
+    opacity: 0;
+    // IE8 filter
+    ie: 0 * 100;
+    filter: #{alpha(opacity = 0-ie)};
+}
 
 .error_message {
     position: relative;
@@ -70,18 +76,4 @@
 .hide_from_screen {
     left: -10000px !important;
     position: absolute !important;
-}
-@mixin opacity($opacity) {
-    opacity: $opacity;
-    // IE8 filter
-    $opacity-ie: $opacity * 100;
-    filter: #{alpha(opacity = $opacity-ie)};
-}
-.disabled,
-[disabled]{
-    cursor: not-allowed;
-    pointer-events: none;
-    // Future-proof disabling of clicks
-    @include opacity(0.65);
-    box-shadow: none;
 }
